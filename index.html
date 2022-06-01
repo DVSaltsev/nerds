@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/normalize.css" />
+  <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+  <!-- <link rel="stylesheet" href="reset.css"> -->
   <link rel="stylesheet" href="css/main.css" />
   <link rel="icon" href="favicon.ico" />
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml" />
@@ -18,21 +19,21 @@
   <header class="header">
     <div class="header__container container">
       <div class="nav__wrapper">
-        <a class="hesder__logo">
+        <a href="#" class="header__logo-link">
           <img class="header__logo-img" src="img/header/logo.svg" width="160" height="65"
             alt="Логотип компании Nerds" />
         </a>
         <ul class="header__nav">
           <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Студия</a>
+            <a class="header__nav-link header__nav-link--current " href="#">Студия</a>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-link" href="#">Клиенты</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="catalog.html">Магазин</a>
+            <a class="header__nav-link header__nav-link--current" href="catalog.html">Магазин</a>
           </li>
-          <li class="header__nav-item header__nav-item-last">
+          <li class="header__nav-item">
             <a class="header__nav-link" href="#">Контакты</a>
           </li>
         </ul>
@@ -42,13 +43,13 @@
   </header>
 
   <main class="main">
-    <!-- <h1 class="main__h1">Интернет-магазин Nёrd's</h1>
-    <!--скроется-->
+    <h1 class="main__h1 visually-hidden">Интернет-магазин Nёrd's</h1>
+
     <section class="presentation">
-      <h2 class="presentation__h2">Презентация Nerds`s в виде слайдера</h2>
-      <!-- будет скрыто -->
-      <div class="presentation__container container">
-        <div class="presentation__banner">
+      <h2 class="presentation__h2 visually-hidden">Презентация Nerds`s в виде слайдера</h2>
+
+      <div class="presentation__container container ">
+        <div class="presentation__banner ">
           <div class="presentation__left-block">
             <p class="presentation__slogan">
               Долго, дорого,<br />
@@ -60,9 +61,14 @@
             </p>
             <a class="presentation__button button" href="#"> Узнать больше</a>
           </div>
-          <img src="img/presentation/expansiv-slide1.png" width="760" height="431" alt="Слайд со смартфонами" />
+          <div class="presentation__right-block">
+            <img class="presentation__img" src="img/presentation/expansiv-slide1.png" width="760" height="431"
+              alt="Слайд со смартфонами" />
+          </div>
         </div>
-        <div class="presentation__banner visually-hidden">
+
+        <div class="presentation__banner visually-hidden ">
+          <!-- visually-hidden -->
           <div class="presentation__left-block">
             <p class="presentation__slogan">
               Любим математику<br />
@@ -74,9 +80,14 @@
             </p>
             <a class="presentation__button button" href="#">Узнать больше</a>
           </div>
-          <img src="img/presentation/love-slide2.png" width="760" height="431" alt="Слайд с мониторами" />
+          <div class="presentation__right-block">
+            <img class="presentation__img" src="img/presentation/love-slide2.png" width="760" height="431"
+              alt="Слайд с мониторами" />
+          </div>
         </div>
-        <div class="presentation__banner visually-hidden">
+
+        <div class="presentation__banner visually-hidden ">
+          <!-- visually-hidden -->
           <div class="presentation__left-block">
             <p class="presentation__slogan">
               Только ночь,<br />
@@ -88,25 +99,29 @@
             </p>
             <a class="presentation__button button" href="#">Узнать больше</a>
           </div>
-          <img src="img/presentation/night-slide3.png" width="760" height="431" alt="Слайд с планшетом" />
-        </div>
-
-        <div class="slider-controls">
-          <button type="button" class="btn-slide-1 current" aria-label="Первый слайд"></button>
-          <button type="button" class="btn-slide-2" aria-label="Второй слайд"></button>
-          <button type="button" class="btn-slide-3" aria-label="Третий слайд"></button>
+          <div class="presentation__right-block">
+            <img class="presentation__img" src="img/presentation/night-slide3.png" width="760" height="431"
+              alt="Слайд с планшетом" />
+          </div>
         </div>
       </div>
+
+      <div class="slider-controls">
+        <button type="button" class="btn-slide btn-slide-1 current" aria-label="Первый слайд"></button>
+        <button type="button" class="btn-slide btn-slide-2" aria-label="Второй слайд"></button>
+        <button type="button" class="btn-slide btn-slide-3" aria-label="Третий слайд"></button>
+      </div>
+
     </section>
 
     <section class="servis">
-      <h2 class="servis__h2">Услуги</h2>
-      <!--будет скрыто -->
+      <h2 class="servis__h2 visually-hidden">Услуги</h2>
+
       <div class="servis__container container">
         <ul class="servis__list">
           <li class="servis__list-item">
-            <img class="servis__img" src=" img/servis/sites.png" width="300" height="146"
-              alt="Схематичное изображение ноутбука" />
+            <div class="servis__wrapper-img"><img class="servis__img" src=" img/servis/sites.png" width="300"
+                height="146" alt="Схематичное изображение ноутбука" /></div>
             <h3 class="servis__h3">Веб-сайты</h3>
             <p class="servis__text">
               Мир никогда не будет прежним<br />
@@ -115,8 +130,8 @@
             <a class="servis__button button servis__button--site" href="#">Заказать</a>
           </li>
           <li class="servis__list-item">
-            <img class="servis__img" src="img/servis/app.png" width="300" height="146"
-              alt="Схематичное изображение смартфона" />
+            <div class="servis__wrapper-img"><img class="servis__img" src="img/servis/app.png" width="300" height="146"
+                alt="Схематичное изображение смартфона" /></div>
             <h3 class="servis__h3">Приложения</h3>
             <p class="servis__text">
               Покорите топ-10 приложений<br />
@@ -125,8 +140,8 @@
             <a class="servis__button button servis__button--app" href="#">Заказать</a>
           </li>
           <li class="servis__list-item">
-            <img class="servis__img" src="img/servis/presentation.png" width="300" height="146"
-              alt="Схематичное изображение ТВ" />
+            <div class="servis__wrapper-img"><img class="servis__img" src="img/servis/presentation.png" width="300"
+                height="146" alt="Схематичное изображение ТВ" /></div>
             <h3 class="servis__h3">Презентации</h3>
             <p class="servis__text">
               Вы даже не подозреваете,<br />
@@ -141,8 +156,8 @@
     <section class="about">
       <div class="about__container container">
         <div class="about__polosa polosa"></div>
-        <h2 class="about__h2">О компании Nerds</h2>
-        <!--будет скрыто-->
+        <h2 class="about__h2 visually-hidden">О компании Nerds</h2>
+
 
         <div class="about__wrapper">
           <div class="about__left-block">
@@ -198,7 +213,7 @@
     <section class="clients">
       <div class="clients__container container">
         <div class="clients__polosa polosa"></div>
-        <h2 class="clients__h2">Клиенты</h2>
+        <h2 class="clients__h2 visually-hidden">Клиенты</h2>
         <!--будет скрыто-->
         <ul class="clients__list">
           <li class="clients__item">
@@ -221,20 +236,22 @@
       </div>
     </section>
   </main>
+  <div class="container">
+    <div class="polosa footer__polosa"></div>
+  </div>
+
   <footer class="footer">
-    <div class="container">
-      <div class="polosa footer__polosa"></div>
-    </div>
+
 
     <section class="footer__map">
-      <h2 class="footer__map-h2">Карта</h2>
+      <h2 class="footer__map-h2  visually-hidden">Карта</h2>
       <!--скроется-->
       <a class="footer__map-link">
         <img class="footer__map-img" src="img/karta/map+mark.png" width="1440" height="416" alt="Карта" />
       </a>
 
       <section class="footer__contacts">
-        <h2 class="footer__contacts-h2">Контакты</h2>
+        <h2 class="footer__contacts-h2 visually-hidden">Контакты</h2>
         <!-- скроется -->
         <p class="footer__contacts-subtitle">Nerds design studio</p>
         <p class="footer__contacts-adress">
@@ -249,32 +266,54 @@
 
     <section class="footer__socials">
       <div class="footer__socials-container container">
-        <h2 class="footer__cocials-h2">Социальные сети</h2>
-        <!-- скроется -->
+        <h2 class="footer__cocials-h2  visually-hidden ">Социальные сети</h2>
+
         <div class="footer__socials-wrapper">
           <ul class="footer__socials-list">
             <li class="footer__socials-item">
               <a class="footer__socials-link" href="#">
-                <div class="footer__cocials-cover">
-                  <img class="footer__socials-img" src="img/socials/vk-icon.svg" width="26" height="15"
-                    alt="Иконка Вконтакте" />
-                </div>
+                <svg class="socials-svg" width="12" height="22" viewBox="0 0 12 22" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+                </svg>
+
               </a>
             </li>
-            <li class="footer__socials-item">
-              <a class="footer__socials-link" href="#">
-                <div class="footer__cocials-cover">
-                  <img class="footer__socials-img" src="img/socials/fb-icon.svg" width="26" height="15"
-                    alt="Иконка Фейсбук" />
-                </div>
-              </a>
-            </li>
-            <li class="footer__socials-item">
-              <a class="footer__socials-link" href="#">
-                <div class="footer__cocials-cover">
-                  <img class="footer__socials-img" img src="img/socials/insta-icon.svg" width="26" height="15"
-                    alt="Иконка Инстаграмм" />
-                </div>
+            <li class="footer__socials-item"> <a class="footer__socials-link" href="#"> <svg class="socials-svg"
+                  width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.138 11.51C17.094
+11.201 18.318 13.55 19.621 14.449C20.599 15.13 21.348 14.983 21.348
+14.983L24.821 14.933C24.821 14.933 26.636 14.821 25.778 13.379C25.707 13.259
+25.275 12.31 23.193 10.357C21.016 8.31404 21.311 8.64504 23.932 5.11304C25.529
+2.96004 26.168 1.64504 25.968 1.08504C25.776 0.546037 24.603 0.686037 24.603
+0.686037L20.69 0.713037C20.309 0.714037 19.986 0.832037 19.839 1.22804C19.836
+1.23204 19.218 2.89404 18.394 4.30704C16.653 7.29604 15.958 7.45504 15.67
+7.26804C15.009 6.83504 15.176 5.53104 15.176 4.60404C15.176 1.70704 15.608
+0.499037 14.33 0.187037C13.903 0.0830374 13.591 0.0150374 12.502
+0.00503741C11.11 -0.0159626 9.92797 0.00503743 9.25797 0.334037C8.81297
+0.557037 8.47197 1.04604 8.67897 1.07404C8.93897 1.10904 9.52197 1.23404
+9.83397 1.66004C10.235 2.21204 10.223 3.44904 10.223 3.44904C10.223 3.44904
+10.452 6.86004 9.68297 7.28304C9.15497 7.57304 8.43297 6.98104 6.87997
+4.26704C6.08697 2.87904 5.48797 1.34504 5.48797 1.34504C5.48797 1.34504 5.37197
+1.06004 5.16197 0.904037C4.91197 0.719037 4.56197 0.660037 4.56197
+0.660037L0.84797 0.684037C0.84797 0.684037 0.28997 0.700037 0.0849697
+0.946037C-0.0970303 1.16404 0.0699697 1.61404 0.0699697 1.61404C0.0699697
+1.61404 2.97897 8.49504 6.27297 11.961C9.29297 15.143 12.725 14.932 12.725
+14.932H14.28C14.28 14.932 14.749 14.878 14.989 14.62C15.213 14.38 15.203 13.929
+15.203 13.929C15.203 13.929 15.172 11.82 16.138 11.51Z" fill="white" />
+                </svg>
+
+              </a> </li>
+            <li class="footer__socials-item"> <a class="footer__socials-link" href="#"> <svg class="socials-svg"
+                  width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18
+21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5
+7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3
+18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5
+17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819
+9H18V18H3ZM14 7H18V3H14V7Z" fill="white" />
+                </svg>
+
               </a>
             </li>
           </ul>
@@ -294,25 +333,38 @@
   <section class="feedback">
     <h2 class="feedback__h2">Напишите нам</h2>
     <form class="feedback__form" action="https://htmlacademy.ru/" method="post">
-      <label class="feedback__name feedback__label">Ваш имя:</label>
-      <label class="feedback__mail feedback__label">Ваш email:</label>
+      <label class="feedback__name feedback__label" for="feedback-name">Ваш имя:</label>
+      <label class="feedback__mail feedback__label" for="feedback-mail">Ваш email:</label>
 
-      <input class="feedback__name-input feedback__in-text" type="text" name="username" value="Имя Фамилия" required />
-      <input class="feedback__mail-input feedback__in-text" type="text" name="usermail" value="email@example.com"
-        required />
+      <input class="feedback__name-input feedback__in-text" id="feedback-name" type="text" name="username"
+        value="Имя Фамилия" required />
+      <input class="feedback__mail-input feedback__in-text" id="feedback-mail" type="text" name="usermail"
+        value="email@example.com" required />
 
-      <label class="feedback__letter feedback__label">Текст письма:</label>
-      <textarea class="feedback__letter-textarea feedback__in-text" name="textarea" required>
+      <label class="feedback__letter feedback__label " for="feedback__ta">Текст письма:</label>
+      <textarea class="feedback__letter-textarea feedback__in-text" id="feedback__ta" name="textarea" required>
 В свободной форме</textarea>
-
-
 
       <button class="feedback__button" type="button">Отправить</button>
     </form>
+    <a href="#" class="close" aria-label="Закрыть форму обратной связи"></a>
 
-    <button class="feedback__form-close" type="button">
-      <img src="img/feedback/close.svg" width="21" height="21" alt="" />
-    </button>
+    <!-- <button class="feedback__form-close" type="button">
+      <svg class="feedback__close-svg" width="21" height="21" viewBox="0 0 21 21" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.3391 10.5088L20.7163 3.13165C21.1056 2.74233 21.1056 2.1058 20.7163
+1.71647L19.3011 0.300294C18.9118 -0.0890303 18.2752 -0.0890303 17.8859
+0.300294L10.5088 7.67844L3.13163 0.301295C2.7423 -0.0880295 2.10577 -0.0880295
+1.71645 0.301295L0.301271 1.71647C-0.0880537 2.1058 -0.0880537 2.74233 0.301271
+3.13165L7.67842 10.5088L0.301271 17.8859C-0.0880537 18.2753 -0.0880537 18.9118
+0.301271 19.3011L1.71745 20.7163C2.10678 21.1056 2.74331 21.1056 3.13263
+20.7163L10.5098 13.3392L17.8869 20.7163C18.2762 21.1056 18.9128 21.1056 19.3021
+20.7163L20.7173 19.3011C21.1066 18.9118 21.1066 18.2753 20.7173 17.8859L13.3391
+10.5088Z" fill="#FB565A" fill-opacity="0.3" />
+      </svg>
+
+
+    </button> -->
   </section>
 </body>
 

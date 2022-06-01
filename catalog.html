@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/normalize.css">
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <!-- <link rel="stylesheet" href="reset.css"> -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
@@ -19,21 +20,21 @@
   <header class="header">
     <div class="header__container container">
       <div class="nav__wrapper">
-        <a class="hesder__logo">
+        <a href="#" class="header__logo-link">
           <img class="header__logo-img" src="img/header/logo.svg" width="160" height="65"
             alt="Логотип компании Nerds" />
         </a>
         <ul class="header__nav">
           <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Студия</a>
+            <a class="header__nav-link header__nav-link--current " href="#">Студия</a>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-link" href="#">Клиенты</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link hesder__nav-link--current" href="catalog.html">Магазин</a>
+            <a class="header__nav-link header__nav-link--current" href="catalog.html">Магазин</a>
           </li>
-          <li class="header__nav-item header__nav-item-last">
+          <li class="header__nav-item">
             <a class="header__nav-link" href="#">Контакты</a>
           </li>
         </ul>
@@ -53,7 +54,7 @@
       <div class="main-catalog__wrapper">
         <section class="filter">
 
-          <h2 class="filter__h2">Фильтр товаров</h2>
+          <h2 class="filter__h2 visually-hidden">Фильтр товаров</h2>
           <!--скроется-->
 
           <form class="filter__form" action="https://echo.htmlacademy.ru/" method="post">
@@ -154,77 +155,108 @@
               Сортировать
             </p>
             <ul class="goods__sort-list">
-              <li class="goods__sort-item"><button class="goods__sort-button">По цене</button></li>
-              <li class="goods__sort-item"><button class="goods__sort-button">По типу</button></li>
-              <li class="goods__sort-item"><button class="goods__sort-button">По названию</button></li>
+              <li class="goods__sort-item"><a href="#" class="goods__sort-link">По цене</a>
+              </li>
+              <li class="goods__sort-item"><a href="#" class="goods__sort-link">По типу</a>
+              </li>
+              <li class="goods__sort-item"><a href="#" class="goods__sort-link">По названию</a>
+              </li>
 
-              <li class="goods__sort-item"><button class="goods__sort-button-arrow"><img class="goods__arrow-img"
-                    src="/img/goods/arrow-to-down.svg" width="11" height="10" alt="стрелка вниз"></button></li>
+              <li class="goods__sort-item"><button class="goods__sort-button-arrow-dn"></button></li>
 
-              <li class="goods__sort-item"><button class="goods__sort-button-arrow"> <img class=" goods__arrow-img"
-                    src="/img/goods/arrow-to-up.svg" width="11" height="10" alt="стрелка вверх"></button></li>
+              <li class="goods__sort-item"><button class="goods__sort-button-arrow-up"> </button></li>
             </ul>
           </div>
 
           <ul class="goods__list">
-            <li class="goods__goods-item"><a class="goods__link" href="#">
-                <img class="goods__img" src="img/goods/sedona.jpg" width="359" height="578" alt="Карта макета Sedona">
-                <div class="goods__item-info">
-                  <p class="goods__item-info-title filter-goods__subtitle">Sedona</p>
-                  <p class="goods__item-info-text">Информационный сайт для туристов</p>
-                  <button class="goods__item-button">9900р</button>
-                </div>
-              </a>
+            <li class="goods__goods-item">
+              <ul class="goods__item-header">
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+              </ul>
+
+              <img class="goods__img" src="img/goods/sedona.jpg" width="359" height="578" alt="Карта макета Sedona">
+              <div class="goods__item-info">
+                <p class="goods__item-info-title filter-goods__subtitle">Sedona</p>
+                <p class="goods__item-info-text">Информационный сайт для туристов</p>
+                <a href="#" class="goods__item-button button">9900р</a>
+              </div>
+
             </li>
-            <li class="goods__goods-item"><a class="goods__link" href="#">
-                <img class="goods__img" src="img/goods/pink-app.jpg" width="358" height="578"
-                  alt="Карта макета Pink App">
-                <div class="goods__item-info">
-                  <p class="goods__item-info-title filter-goods__subtitle">Pink App</p>
-                  <p class="goods__item-info-text">Продуктовый лендингприложения для iOS и Android</p>
-                  <button class="goods__item-button">9900р</button>
-                </div>
-              </a></li>
-            <li class="goods__goods-item"><a class="goods__link" href="#">
-                <img class="goods__img" src="img/goods/barbershop.jpg" width="358" height="578"
-                  alt="Карта макета Barbershop">
-                <div class="goods__item-info">
-                  <p class="goods__item-info-title filter-goods__subtitle">Borodinski</p>
-                  <p class="goods__item-info-text">Информационный сайт барбершопа</p>
-                  <button class="goods__item-button">9900р</button>
-                </div>
-              </a></li>
-            <li class="goods__goods-item"><a class="goods__link" href="#">
-                <img class="goods__img" src="img/goods/mishka.png" width="358" height="578" alt="Карта макета Mishka">
-                <div class="goods__item-info">
-                  <p class="goods__item-info-title filter-goods__subtitle">Mishka</p>
-                  <p class="goods__item-info-text">Информационный сайт Mishka</p>
-                  <button class="goods__item-button">9900р</button>
-                </div>
-              </a></li>
-            <li class="goods__goods-item"><a class="goods__link" href="#">
-                <img class="goods__img" src="img/goods/aplus.png" width="358" height="578" alt="Карта макета Aplus">
-                <div class="goods__item-info">
-                  <p class="goods__item-info-title filter-goods__subtitle">A plus</p>
-                  <p class="goods__item-info-text">Информационный сайт для A plus</p>
-                  <button class="goods__item-button">9900р</button>
-                </div>
-              </a></li>
-            <li class="goods__goods-item"><a class="goods__link" href="#">
-                <img class="goods__img" src="img/goods/kvas.png" width="358" height="578" alt="Карта макета Квас">
-                <div class="goods__item-info">
-                  <p class="goods__item-info-title filter-goods__subtitle">Кваст</p>
-                  <p class="goods__item-info-text">Информационный сайт для kvast</p>
-                  <button class="goods__item-button">9900р</button>
-                </div>
-              </a></li>
+            <li class="goods__goods-item">
+              <ul class="goods__item-header">
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+              </ul>
+              <img class="goods__img" src="img/goods/pink-app.jpg" width="358" height="578" alt="Карта макета Pink App">
+              <div class="goods__item-info">
+                <p class="goods__item-info-title filter-goods__subtitle">Pink App</p>
+                <p class="goods__item-info-text">Продуктовый лендингприложения для iOS и Android</p>
+                <a href="#" class="goods__item-button button">9900р</a>
+              </div>
+            </li>
+            <li class="goods__goods-item">
+              <ul class="goods__item-header">
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+              </ul>
+              <img class="goods__img" src="img/goods/barbershop.jpg" width="358" height="578"
+                alt="Карта макета Barbershop">
+              <div class="goods__item-info">
+                <p class="goods__item-info-title filter-goods__subtitle">Borodinski</p>
+                <p class="goods__item-info-text">Информационный сайт барбершопа</p>
+                <a href="#" class="goods__item-button button">9900р</a>
+              </div>
+            </li>
+            <li class="goods__goods-item">
+              <ul class="goods__item-header">
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+              </ul>
+              <img class="goods__img" src="img/goods/mishka.png" width="358" height="578" alt="Карта макета Mishka">
+              <div class="goods__item-info">
+                <p class="goods__item-info-title filter-goods__subtitle">Mishka</p>
+                <p class="goods__item-info-text">Информационный сайт Mishka</p>
+                <a href="#" class="goods__item-button button">9900р</a>
+              </div>
+            </li>
+            <li class="goods__goods-item">
+              <ul class="goods__item-header">
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+              </ul>
+              <img class="goods__img" src="img/goods/aplus.png" width="358" height="578" alt="Карта макета Aplus">
+              <div class="goods__item-info">
+                <p class="goods__item-info-title filter-goods__subtitle">A plus</p>
+                <p class="goods__item-info-text">Информационный сайт для A plus</p>
+                <a href="#" class="goods__item-button button">9900р</a>
+              </div>
+            </li>
+            <li class="goods__goods-item">
+              <ul class="goods__item-header">
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+                <li class="goods__header-mark"></li>
+              </ul>
+              <img class="goods__img" src="img/goods/kvas.png" width="358" height="578" alt="Карта макета Квас">
+              <div class="goods__item-info">
+                <p class="goods__item-info-title filter-goods__subtitle">Кваст</p>
+                <p class="goods__item-info-text">Информационный сайт для kvast</p>
+                <a href="#" class="goods__item-button button">9900р</a>
+              </div>
+            </li>
           </ul>
 
           <ul class="goods__pugination">
-            <li class="goods__pages"><a class="goods__pages-link">1</a></li>
+            <li class="goods__pages "><a class="goods__pages-link goods__pages--activ">1</a></li>
             <li class="goods__pages"><a class="goods__pages-link" href="">2</a></li>
             <li class="goods__pages"><a class="goods__pages-link" href="">3</a></li>
-            <li class="goods__pages"><a class="goods__pages-link" href="">Следующая</a></li>
+            <li class="goods__pages"><a class="goods__pages-link goods__pages-link-last" href="">Следующая</a></li>
           </ul>
 
         </section>
@@ -235,19 +267,17 @@
 
 
   <footer class="footer">
-    <div class="container">
-      <div class="polosa footer__polosa"></div>
-    </div>
+
 
     <section class="footer__map">
-      <h2 class="footer__map-h2">Карта</h2>
+      <h2 class="footer__map-h2  visually-hidden">Карта</h2>
       <!--скроется-->
       <a class="footer__map-link">
         <img class="footer__map-img" src="img/karta/map+mark.png" width="1440" height="416" alt="Карта" />
       </a>
 
       <section class="footer__contacts">
-        <h2 class="footer__contacts-h2">Контакты</h2>
+        <h2 class="footer__contacts-h2 visually-hidden">Контакты</h2>
         <!-- скроется -->
         <p class="footer__contacts-subtitle">Nerds design studio</p>
         <p class="footer__contacts-adress">
@@ -262,32 +292,54 @@
 
     <section class="footer__socials">
       <div class="footer__socials-container container">
-        <h2 class="footer__cocials-h2">Социальные сети</h2>
-        <!-- скроется -->
+        <h2 class="footer__cocials-h2  visually-hidden ">Социальные сети</h2>
+
         <div class="footer__socials-wrapper">
           <ul class="footer__socials-list">
             <li class="footer__socials-item">
               <a class="footer__socials-link" href="#">
-                <div class="footer__cocials-cover">
-                  <img class="footer__socials-img" src="img/socials/vk-icon.svg" width="26" height="15"
-                    alt="Иконка Вконтакте" />
-                </div>
+                <svg class="socials-svg" width="12" height="22" viewBox="0 0 12 22" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+                </svg>
+
               </a>
             </li>
-            <li class="footer__socials-item">
-              <a class="footer__socials-link" href="#">
-                <div class="footer__cocials-cover">
-                  <img class="footer__socials-img" src="img/socials/fb-icon.svg" width="26" height="15"
-                    alt="Иконка Фейсбук" />
-                </div>
-              </a>
-            </li>
-            <li class="footer__socials-item">
-              <a class="footer__socials-link" href="#">
-                <div class="footer__cocials-cover">
-                  <img class="footer__socials-img" img src="img/socials/insta-icon.svg" width="26" height="15"
-                    alt="Иконка Инстаграмм" />
-                </div>
+            <li class="footer__socials-item"> <a class="footer__socials-link" href="#"> <svg class="socials-svg"
+                  width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.138 11.51C17.094
+11.201 18.318 13.55 19.621 14.449C20.599 15.13 21.348 14.983 21.348
+14.983L24.821 14.933C24.821 14.933 26.636 14.821 25.778 13.379C25.707 13.259
+25.275 12.31 23.193 10.357C21.016 8.31404 21.311 8.64504 23.932 5.11304C25.529
+2.96004 26.168 1.64504 25.968 1.08504C25.776 0.546037 24.603 0.686037 24.603
+0.686037L20.69 0.713037C20.309 0.714037 19.986 0.832037 19.839 1.22804C19.836
+1.23204 19.218 2.89404 18.394 4.30704C16.653 7.29604 15.958 7.45504 15.67
+7.26804C15.009 6.83504 15.176 5.53104 15.176 4.60404C15.176 1.70704 15.608
+0.499037 14.33 0.187037C13.903 0.0830374 13.591 0.0150374 12.502
+0.00503741C11.11 -0.0159626 9.92797 0.00503743 9.25797 0.334037C8.81297
+0.557037 8.47197 1.04604 8.67897 1.07404C8.93897 1.10904 9.52197 1.23404
+9.83397 1.66004C10.235 2.21204 10.223 3.44904 10.223 3.44904C10.223 3.44904
+10.452 6.86004 9.68297 7.28304C9.15497 7.57304 8.43297 6.98104 6.87997
+4.26704C6.08697 2.87904 5.48797 1.34504 5.48797 1.34504C5.48797 1.34504 5.37197
+1.06004 5.16197 0.904037C4.91197 0.719037 4.56197 0.660037 4.56197
+0.660037L0.84797 0.684037C0.84797 0.684037 0.28997 0.700037 0.0849697
+0.946037C-0.0970303 1.16404 0.0699697 1.61404 0.0699697 1.61404C0.0699697
+1.61404 2.97897 8.49504 6.27297 11.961C9.29297 15.143 12.725 14.932 12.725
+14.932H14.28C14.28 14.932 14.749 14.878 14.989 14.62C15.213 14.38 15.203 13.929
+15.203 13.929C15.203 13.929 15.172 11.82 16.138 11.51Z" fill="white" />
+                </svg>
+
+              </a> </li>
+            <li class="footer__socials-item"> <a class="footer__socials-link" href="#"> <svg class="socials-svg"
+                  width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18
+21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5
+7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3
+18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5
+17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819
+9H18V18H3ZM14 7H18V3H14V7Z" fill="white" />
+                </svg>
+
               </a>
             </li>
           </ul>
