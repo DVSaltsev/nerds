@@ -58,52 +58,55 @@
           <!--скроется-->
 
           <form class="filter__form" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="filtr__cost">
-              <p class="filter__cost-subtitle filter-goods__subtitle">
-                Стоимость:
-              </p>
+            <fieldset class="filter__item">
+              <legend class="filter__catalog-subtitle">Стоимость:</legend>
+              <div class="filter__range">
 
-              <!-- <input class="filter__cost-range" type="range" name="cost" id="cost" min="0" max="150000" value="0"
-                step="1"> -->
-              <div class="filter__wrapper-range">
-                <div class="filter__full-range"></div>
-                <div class="filter__selected-range"></div>
-                <img src="img/goods/toogle.svg" alt="левый указатель диапазона" class="filter__img-range">
-                <img src="img/goods/toogle.svg" alt="правый указатель диапазона"
-                  class="filter__img-range filter__img-range--right">
-              </div>
+                <div class="filter__range-controls">
+                  <div class="filter__scale">
+                    <div class="filter__bar">
+                    </div>
+                    <div class="filter__toggle filter__toggle-min" tabindex="0" style="
+                    left: 20%"></div>
+                    <div class=" filter__toggle filter__toggle-max" tabindex="0" style="
+              left: 50%"></div>
+                  </div>
+                </div>
 
-              <div class="filter__wrapper-rang-num">
-                <label class="filter__cost-text">
-                  от<input class="filter__cost-from" type="number" name="min-cost" id="" value="0">
-                </label>
-                <label class="filter__cost-text">
-                  до<input class="filter__cost-to" type="number" name="max-cost" id="" value="150000">
-                </label>
+                <div class=" filter__price-controls">
+                  <label class="filter__min-price">
+                    от <input class="filter__min-price-input" type="number" name="min-price" value="0">
+                  </label>
+                  <label class="filter__max-price">
+                    до <input class="filter__max-price-input" type="number" name="max-price" value="15000">
+                  </label>
+                </div>
+
+
               </div>
-            </div>
-            <!-- <div class="test-grid">
-              <p>A</p>
-              <p>B</p>
-              <p>C</p>
-              <p>D</p>
-            </div> -->
+            </fieldset>
+
 
             <div class="filter__grid">
-              <p class="filter__grid-subtitle filter-goods__subtitle">
+              <p class="filter__grid-subtitle catalog-subtitle">
                 Сетка: </p>
 
               <div class="filter__wrapper-radio">
-                <label class="filter__grid-text" for="">
-                  <input class="filter__grid-radio-item" type="radio" name="grid" id="" value="adaptiv" checked>
+                <input class="filter__grid-radio-item visually-hidden" type="radio" name="grid" id="filter-radio-adapt"
+                  value="adaptiv" checked>
+                <label class="filter__grid-text " for="filter-radio-adapt">
+
                   Адаптивная
                 </label>
-                <label class="filter__grid-text" for="">
-                  <input class="filter__grid-radio-item" type="radio" name="fix" id="" value="fix">
+                <input class="filter__grid-radio-item visually-hidden" type="radio" name="grid" id="filter-radio-fix"
+                  value="fix">
+                <label class="filter__grid-text " for="filter-radio-fix">
                   Фиксированная
                 </label>
-                <label class="filter__grid-text" for="">
-                  <input class="filter__grid-radio-item" type="radio" name="gum" id="" value="gum">
+                <input class="filter__grid-radio-item visually-hidden" type="radio" name="grid" id="filter-radio-gum"
+                  value="gum">
+                <label class="filter__grid-text " for="filter-radio-gum">
+
                   Резиновая
                 </label>
               </div>
