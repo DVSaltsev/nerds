@@ -1438,6 +1438,7 @@ feedback__close-svg .main-catalog {
   margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1507,7 +1508,7 @@ feedback__close-svg .main-catalog {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 25px 80px 44px;
+  padding: 25px 50px 44px;
 }
 .goods__item-info-title {
   margin-bottom: 12px;
@@ -1521,6 +1522,7 @@ feedback__close-svg .main-catalog {
   text-align: center;
 }
 .goods__item-button {
+  width: 200px;
 }
 .goods__pugination {
   display: flex;
