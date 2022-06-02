@@ -1347,7 +1347,6 @@ feedback__close-svg .main-catalog {
   margin-bottom: 60px;
 }
 .goods__h2 {
-  display: none;
 }
 .goods__sort {
   display: flex;
@@ -1362,40 +1361,93 @@ feedback__close-svg .main-catalog {
   display: flex;
   width: 360px;
   justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
 }
 .goods__sort-item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
-.goods__sort-button {
+
+.goods__sort-link {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+  text-transform: uppercase;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  border: none;
 }
+
+.goods__sort-link:hover {
+  opacity: 0.6;
+}
+
+.goods__sort-link:hover {
+  opacity: 0.6;
+}
+
+.goods__sort-link:active {
+  opacity: 1;
+}
+.goods__sort-link:focus {
+  opacity: 1;
+}
+
 .goods__sort-button-arrow-dn {
-  top: -2px;
+  /* top: -2px;*/
+  display: block;
   width: 11px;
   height: 10px;
   background: url(../img/goods/arrow-to-down.svg) no-repeat 0 0;
   border: none;
-  background-color: transparent;
+
   opacity: 0.2;
+  cursor: pointer;
 }
 
 .goods__sort-button-arrow-up {
-  top: -2px;
+  display: block;
   width: 11px;
   height: 10px;
   background: url(../img/goods/arrow-to-up.svg) no-repeat 0 0;
   border: none;
-  background-color: transparent;
+
   opacity: 0.2;
+  cursor: pointer;
+}
+.goods__sort-button:hover {
+  opacity: 0.6;
+}
+.goods__sort-button:active {
+  opacity: 1;
 }
 .goods__arrow-img {
 }
 
 .goods__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px 40px;
   padding-bottom: 55px;
 }
 .goods__goods-item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .goods__item-header {
@@ -1424,6 +1476,24 @@ feedback__close-svg .main-catalog {
   width: 100%;
   height: auto;
 }
+.goods__img::before {
+  content: "";
+  display: block;
+  width: 360px;
+  height: 40px;
+  box-sizing: border-box;
+  background-color: #4d4d4d;
+
+  /* align-items: center;
+  
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  opacity: 0.12;
+  padding-left: 16px; */
+}
+
 .goods__item-info {
   background: #eeeeee;
   display: flex;
