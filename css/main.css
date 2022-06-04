@@ -105,7 +105,7 @@ p {
 
 .button {
   display: flex;
-  height: 50px;
+  min-height: 50px;
   width: 240px;
   background-color: var(--basic-red);
   border: none;
@@ -114,13 +114,14 @@ p {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 58px;
+  line-height: 1.2;
   color: var(--basic-white);
   text-transform: uppercase;
   /* text-align: center; */
   text-decoration: none;
   justify-content: center;
   align-items: center;
+  padding: 0 10px;
 }
 
 .container {
@@ -159,6 +160,7 @@ p {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  margin: 0;
 }
 
 .header {
@@ -310,7 +312,7 @@ p {
   margin-bottom: 38px;
 }
 .presentation__button {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 .presentation__button:hover {
   background-color: var(--basic-red-hover);
@@ -333,9 +335,6 @@ p {
   background-color: #eeeeee;
   grid-column: -3/-1;
   grid-row: -2/-1;
-}
-
-.button {
 }
 
 .slider-controls {
@@ -457,8 +456,6 @@ p {
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-.button {
-}
 .servis__button--app {
   background-color: #00ca74;
 }
@@ -722,8 +719,6 @@ p {
 .footer__contacts-button {
   height: 58px;
   width: 219px;
-}
-.button {
 }
 
 .footer__socials {
