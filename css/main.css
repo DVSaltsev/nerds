@@ -349,6 +349,10 @@ p {
   /* top: 54px;
   left: 140px;
   z-index: 2; */
+
+  left: 50%;
+  top: 79%;
+  transform: translate(-50%, -50%);
 }
 
 .btn-slide {
@@ -390,7 +394,7 @@ p {
 }
 
 .servis {
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 .servis__h2 {
 }
@@ -406,6 +410,7 @@ p {
   padding: 0;
 }
 .servis__list-item {
+  margin-bottom: 50px;
 }
 .servis__img {
   width: 300px;
@@ -430,19 +435,23 @@ p {
 }
 
 .servis__h3 {
+  box-sizing: border-box;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
 
   text-transform: uppercase;
+  max-width: 300px;
 }
 .servis__text {
+  box-sizing: border-box;
   font-family: "Roboto";
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   font-style: normal;
   color: var(--color-black1);
+  max-width: 260px;
 }
 .servis__button {
   width: 160px;
@@ -500,6 +509,7 @@ p {
   grid-template-columns: 2fr 1fr;
 }
 .about__left-block {
+  padding-right: 50px;
 }
 
 .about__h2 {
@@ -598,40 +608,14 @@ p {
 .clients__h2 {
 }
 .clients__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 0;
-  list-style: none;
-}
-.clients__item {
-}
-.clients__link {
-}
-.clients__logo {
-  opacity: 0.2;
-}
-.clients__logo:hover {
-  opacity: 1;
-}
-
-.clients__logo:active {
-  opacity: 0.1;
-}
-
-.clients {
-}
-.clients__container {
-}
-.container {
-}
-.clients__h2 {
-}
-.clients__list {
-  list-style-type: none;
   padding: 0;
+  list-style: none;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
 }
 .clients__item {
 }
@@ -647,12 +631,13 @@ p {
 .clients__logo:active {
   opacity: 0.1;
 }
+
 .footer__map {
   /* background-color: $color-yelow0;
   } */
   position: relative;
   /* display: none; */
-  padding-bottom: 68px;
+  /* padding-bottom: 68px; */
 }
 
 .footer__polosa {
@@ -671,6 +656,14 @@ p {
   object-fit: contain;
   background-color: #e8e5d5;
 }
+
+.footer__google-map {
+  width: 100%;
+  height: 30vw;
+  display: block;
+  object-fit: contain;
+  background-color: #e8e5d5;
+}
 .footer__mark-link {
   position: absolute;
 }
@@ -684,9 +677,13 @@ p {
   box-sizing: border-box;
   padding: 49px 50px 47px 50px;
   position: absolute;
-  top: 54px;
-  left: 140px;
+
   z-index: 2;
+
+  left: 9.7%;
+  top: 50%;
+  transform: translate(-0%, -50%);
+  background-color: var(--basic-white);
 }
 .footer__contacts-h2 {
 }
@@ -731,7 +728,7 @@ p {
 
 .footer__socials-wrapper {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 34.48% 65.52%;
   align-items: center;
 }
 .footer__socials-list {
@@ -741,7 +738,7 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-right: 139px;
+  /* margin-right: 139px; */
 }
 .footer__socials-item {
 }
@@ -811,24 +808,17 @@ p {
 }
 
 .feedback {
-  margin: 0 auto;
-  width: 760px;
+  width: 960px;
+  /* margin: 0 auto; */
   padding: 63px 100px 84px 100px;
-
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
-  background-color: var(--basic-white);
-  position: relative;
-
-  /* left: 50%;
+  position: fixed;
+  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); */
-
-  /* max-width: 960px;
-  max-height: 590px; */
-
-  /* position: fixed; */
-
-  /* display: none; */
+  transform: translate(-50%, -50%);
+  background-color: var(--basic-white);
+  z-index: 3;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
 }
 .feedback__h2 {
   font-weight: 700;
@@ -1384,6 +1374,7 @@ feedback__close-svg .main-catalog {
 }
 .goods__sort-list {
   display: flex;
+  flex-wrap: wrap;
   width: 360px;
   justify-content: space-between;
 
@@ -1513,6 +1504,10 @@ feedback__close-svg .main-catalog {
   object-fit: contain;
   background-color: white;
 }
+
+.goods__img--active {
+  filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.25));
+}
 /* .goods__img::before {
   content: "";
   display: block;
@@ -1567,6 +1562,7 @@ feedback__close-svg .main-catalog {
 .goods__pages-link {
   text-decoration: none;
   display: block;
+  box-sizing: border-box;
   background-color: var(--background-gray);
   width: 50px;
   height: 50px;
