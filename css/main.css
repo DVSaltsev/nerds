@@ -831,6 +831,9 @@ p {
   box-sizing: border-box;
   display: none;
 }
+.feedback--show {
+  display: block;
+}
 .feedback__h2 {
   font-weight: 700;
   font-size: 45px;
