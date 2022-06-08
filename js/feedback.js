@@ -2,7 +2,7 @@
 const feedbackLink = document.querySelector(".footer__contacts-button");
 const feedbackPopup = document.querySelector(".feedback");
 const feedbackClose = feedbackPopup.querySelector(".close");
-const feedbackLogin = feedbackPopup.querySeleсtor(".feedback__name-input");
+const feedbackName = feedbackPopup.querySeleсtor(".feedback__name-input");
 
 feedbackLink.addEventListener("click", function (evt) {
   evt.preventDefault();
